@@ -1,1 +1,379 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MASON CONSTRUCTORA</title>
+  <style>
+    :root{--accent:#2b6cb0;--muted:#6b7280;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    body{margin:0;background:#f7fafc;color:#111;font-family:var(--font, Arial), sans-serif}
+    header{background:linear-gradient(90deg, #ffffff, #f1f5f9);padding:18px 24px;border-bottom:1px solid #e6edf3;display:flex;align-items:center;justify-content:space-between}
+    h1{margin:0;font-size:18px;color:var(--accent)}
+    main{padding:24px;max-width:980px;margin:24px auto}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+    .card{background:#fff;padding:14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06);cursor:pointer;border:1px solid #eef2f7}
+    .card:hover{transform:translateY(-4px);transition:all .18s}
+    .subtitle{color:var(--muted);font-size:13px;margin-top:6px}
+    .page{display:none}
+    .page.active{display:block}
+    .back{display:inline-block;margin-top:14px;padding:8px 12px;border-radius:8px;background:#fff;border:1px solid #e2e8f0;text-decoration:none;color:#111}
+    footer{padding:18px 24px;color:var(--muted);text-align:center}
+    .objective, .problem{background:#fff;padding:12px;border-radius:8px;border:1px solid #e6edf3;margin-bottom:18px}
+    .team{background:#fff;padding:12px;border-radius:8px;border:1px solid #e6edf3;margin-top:24px}
+    .team h3{margin-top:0;color:var(--9accent)}
+    .team-member{margin-bottom:12px}
+    .team-member strong{display:block;font-size:15px;color:#111}
+    .team-member span{display:block;font-size:13px;color:var(--muted)}
+    nav a{margin-left:10px;color:var(--accent);text-decoration:none}
+    .small-meta{font-size:13px;color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MASON CONSTRUCTORA</h1>
+  </header>
 
+  <main>
+    <section id="home" class="page active">
+      <div class="problem">
+        <strong>Planteamiento del problema:</strong>
+        <p>En MASON CONSTRUCTORA la información sobre trabajadores, maquinaria y materiales estaba dispersa en archivos físicos y hojas de cálculo, lo que generaba duplicidad, pérdida de datos y errores. La falta de un sistema centralizado dificultaba la consulta de recursos, retrasaba procesos administrativos y operativos, y aumentaba el riesgo de errores humanos. Por ello, se propuso desarrollar un sistema digital centralizado para integrar la gestión de recursos y optimizar la eficiencia.</p>
+      </div>
+
+      <div class="objective">
+        <strong>Objetivo del proyecto:</strong>
+        <p>Desarrollar un sistema de información centralizado para optimizar los procesos operativos, mejorar la eficiencia en la gestión de recursos y facilitar la toma de decisiones en MASON CONSTRUCTORA, utilizando herramientas tecnológicas para el diseño de la interfaz de usuario y la administración de la base de datos.</p>
+      </div>
+
+      <h2>Subsistema del proyectos</h2>
+      <div class="grid" id="menu">
+        <div class="card" onclick="openPage('clientes')"><strong>Clientes</strong><div class="subtitle">Gestión de datos de clientes</div></div>
+        <div class="card" onclick="openPage('trabajadores')"><strong>Trabajadores</strong><div class="subtitle">Registro, roles y disponibilidad</div></div>
+        <div class="card" onclick="openPage('planos')"><strong>Planos</strong><div class="subtitle">Versiones, acceso y aprobación</div></div>
+        <div class="card" onclick="openPage('proveedores')"><strong>Proveedores</strong><div class="subtitle">Contactos, contratos y evaluaciones</div></div>
+        <div class="card" onclick="openPage('finanzas')"><strong>Área de Finanzas</strong><div class="subtitle">Presupuestos, pagos y seguimiento</div></div>
+        <div class="card" onclick="openPage('legal')"><strong>Área Legal</strong><div class="subtitle">Contratos y asuntos legales</div></div>
+        <div class="card" onclick="openPage('permisos')"><strong>Permisos y Licencias</strong><div class="subtitle">Trámites y vencimientos</div></div>
+        <div class="card" onclick="openPage('seguros')"><strong>Seguros</strong><div class="subtitle">Pólizas y reclamaciones</div></div>
+        <div class="card" onclick="openPage('almacen')"><strong>Almacén (Materiales y Maquinaria)</strong><div class="subtitle">Inventario y movimientos</div></div>
+        <div class="card" onclick="openPage('transporte')"><strong>Transporte</strong><div class="subtitle">Flota, rutas y asignaciones</div></div>
+        <div class="card" onclick="openPage('seguridad')"><strong>Ingeniero en Seguridad e Higiene</strong><div class="subtitle">Reportes e inspecciones</div></div>
+        <div class="card" onclick="openPage('especialistas')"><strong>Ingenieros Especialistas</strong><div class="subtitle">Eléctrico, Mecánico, Hidráulico</div></div>
+        <div class="card" onclick="openPage('disenador')"><strong>Diseñador de Interiores / Paisajista</strong><div class="subtitle">Propuestas y renders</div></div>
+      </div>
+
+      <div class="team">
+        <h3>Integrantes del equipo</h3>
+        <div class="team-member">
+          <strong>Leilany Aislinn Sánchez</strong>
+          <span>Estudiante de ITIC´s — ITSOEH</span>
+          <span>Mixquiahuala, HGO.</span>
+          <span>230110166—@itsoeh.edu.mx</span>
+        </div>
+        <div class="team-member">
+          <strong>Jacob Salas Andrea</strong>
+          <span>Estudiante de ITIC´s — ITSOEH</span>
+          <span>Santiago de Anaya, HGO.</span>
+          <span>230110449—@itsoeh.edu.mx</span>
+        </div>
+        <div class="team-member">
+          <strong>Pérez Pérez Sebastián</strong>
+          <span>Estudiante de ITIC´s — ITSOEH</span>
+          <span>Mixquiahuala, HGO.</span>
+          <span>230110689@itsoeh.edu.mx</span>
+        </div>
+        <div class="team-member">
+          <strong>Lozano Camargo Diego</strong>
+          <span>Estudiante de ITIC´s — ITSOEH</span>
+          <span>San Salvador, HGO.</span>
+          <span>230110530—@itsoeh.edu.mx</span>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Pages -->
+    <section id="clientes" class="page">
+      <h2>Clientes</h2>
+      <p>Ficha del cliente, historial de proyectos, contactos y documentos adjuntos.</p>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    <section id="trabajadores" class="page">
+      <h2>Trabajadores</h2>
+      <p>Registro de personal, roles, certificados, control de entrada/salida y asignación de faenas.</p>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    <section id="planos" class="page">
+      <h2>Planos</h2>
+      <p>Repositorio de planos con control de versiones y permisos de acceso.</p>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    <section id="proveedores" class="page">
+      <h2>Proveedores</h2>
+      <p>Contactos, contratos, historial de compras y evaluación de desempeño.</p>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+    <section id="finanzas" class="page">
+
+    // Apartado de Área de Finanzas
+
+         <h2>Área de Finanzas</h2>
+      <p>Mantener un control detallado y confiable de los ingresos y egresos de la empresa, garantizando la estabilidad y salud financiera de la constructora.</p>
+      <div class="subapartado">
+        <h2>Usuarios del subsistema</h2>
+        <ul>
+        <li>Propietario</li>
+        <li>Empleado (Contador)</li>
+        </ul>
+        <div class="subapartado"></div>
+        <h3>Requerimientos por usuario</h3>
+        <h4>Requerimientos del Propietario</h4>
+        <p>El propietario debe ser capaz de:</p>
+         <ol>
+            <li>Revisar los presupuestos asignados</li>
+            <li>Modificar los gastos cuando sea necesario</li>
+            <li>Eliminar registros obsoletos en la base de datos</li>
+        
+         </ol>
+        <h4>Requerimientos del Empleado (Contador)</h4>
+        <p>El empleado (contador) debe ser capaz de:</p>
+        <ol>
+            <li>Registrar facturas </li>
+            <li>Actualizar los gastos en la base de datos</li>
+            <li>Eliminar registros obsoletos en la base de datos</li>
+         </ol>
+      <div class="subapartado">
+        <h3>Campos</h3>
+        <p>ID_Registro</p>
+        <p>Responsable</p>
+        <p>Correo </p>
+        <p>Telefono</p>
+        <p>Presupuesto_asignado</p>
+        <p>Gastos</p>
+        <p>Facturas</p>
+      </div>
+      <div class="subapartado">
+        <h3>Diseño de la base de datos del subsistema</h3>
+        <p>Tablas: Transacciones, Presupuestos, Pagos, Ingresos.</p>
+      </div>
+      <div class="subapartado">
+        <h3>Responsable del subsistema</h3>
+        <p>Andrea Jacob Salas (230110449@itsoeh.edu.mx)</p>
+      </div>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    // Apartado Área legal
+    <section id="legal" class="page">
+      <h2>Área Legal</h2>
+      <p>Gestión de contratos, litigios y cumplimiento normativo.</p>
+      <div class="subapartado">
+        <h2>Usuarios del subsistema</h2>
+        <ul>
+        <li>Gerente</li>
+        <li>Empleado (Abogado)</li>
+        </ul>
+        <div class="subapartado"></div>
+        <h3>Requerimientos por usuario</h3>
+        <h4>Requerimientos del Gerente</h4>
+        <p>El gerentre debe ser capaz de:</p>
+         <ol>
+            <li>Registrar contratos</li>
+            <li>Actualizar fechas</li>
+            <li>Eliminar contratos</li>
+        
+         </ol>
+        <h4>Requerimientos del Empleado (Contador)</h4>
+        <p>El empleado (Abogado) debe ser capaz de:</p>
+        <ol>
+            <li>Consultar contratos</li>
+            <li>Actualizar contratos</li>
+            <li>Consultar el estado activo o no del contratos</li>
+            <li>Actualizar el estado activo o no del contratos</li>
+         </ol>
+      <div class="subapartado">
+        <h3>Campos</h3>
+        <p>ID_Documento</p>
+        <p>Tipo_contrato</p>
+        <p>Cliente_Proveedor </p>
+        <p>Fecha_inicio </p>
+        <p>Fecha_vencimiento</p>
+        <p>Estado</p>
+      </div>
+      <div class="subapartado">
+        <h3>Diseño de la base de datos del subsistema</h3>
+      </div>
+      <div class="subapartado">
+        <h3>Responsable del subsistema</h3>
+        <p>Andrea Jacob Salas (230110449@itsoeh.edu.mx)</p>
+      </div>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    //Apartado permisos
+    <section id="permisos" class="page">
+       <h2>Permisos y Licencias</h2>
+      <p>Trámites, estado de permisos y vencimientos.</p>
+      <div class="subapartado">
+        <h2>Usuarios del subsistema</h2>
+        <ul>
+        <li>Gerente</li>
+        <li>Empleado (Abogado)</li>
+        </ul>
+        <div class="subapartado"></div>
+        <h3>Requerimientos por usuario</h3>
+        <h4>Requerimientos del Gerente</h4>
+        <p>El gerentre debe ser capaz de:</p>
+         <ol>
+            <li>Registrar licencias</li>
+            <li>Actualizar licencias</li>
+            <li>Eliminar licencias</li>
+        
+         </ol>
+        <h4>Requerimientos del Empleado (Contador)</h4>
+        <p>El empleado (Abogado) debe ser capaz de:</p>
+        <ol>
+            <li>Consultar licencias</li>
+            <li>Actualizar licencias</li>
+         </ol>
+        
+      <div class="subapartado">
+        <h3>Campos</h3>
+        <p>ID_Licencia</p>
+        <p>Tipo</p>
+        <p>Fecha_emisipn</p>
+        <p>Fecha_vencimiento</p>
+        <p>Proyecto_asociado</p>
+      </div>
+      <div class="subapartado">
+        <h3>Diseño de la base de datos del subsistema</h3>
+      </div>
+      <div class="subapartado">
+        <h3>Responsable del subsistema</h3>
+        <p>Andrea Jacob Salas (230110449@itsoeh.edu.mx)</p>
+      </div>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    //Apartado Área de seguros
+    <section id="seguros" class="page">
+      <h2>Seguros</h2>
+      <p>Proteger a la empresa, personal y maquinaria de riesgos.</p>
+      <div class="subapartado">
+        <h2>Usuarios del subsistema</h2>
+        <ul>
+        <li>Gerente</li>
+        <li>Empleado (Abogado)</li>
+        </ul>
+        <div class="subapartado"></div>
+        <h3>Requerimientos por usuario</h3>
+        <h4>Requerimientos del Gerente</h4>
+        <p>El gerentre debe ser capaz de:</p>
+         <ol>
+            <li>Registrar licencias</li>
+            <li>Actualizar licencias</li>
+            <li>Eliminar licencias</li>
+         </ol>
+        <h4>Requerimientos del Empleado (Contador)</h4>
+        <p>El empleado (Abogado) debe ser capaz de:</p>
+        <ol>
+            <li>Consultar licencias</li>
+            <li>Actualizar licencias</li>
+         </ol>
+      <div class="subapartado">
+        <h3>Campos</h3>
+        <p>ID_Seguro</p>
+        <p>Tipo</p>
+        <p>Fecha_inicio</p>
+        <p>Fecha_vencimiento</p>
+        <p>Estado</p>
+      </div>
+      <div class="subapartado">
+        <h3>Diseño de la base de datos del subsistema</h3>
+        <p>Tablas: Pólizas, Aseguradoras, Siniestros.</p>
+      </div>
+      <div class="subapartado">
+        <h3>Responsable del subsistema</h3>
+        <p>Andrea Jacob Salas (230110449@itsoeh.edu.mx)</p>
+      </div>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+
+    <section id="almacen" class="page">
+      <h2>Almacén (Materiales y Maquinaria)</h2>
+      <p>Inventario, control de salidas/entradas, ubicación y mantenimiento de maquinaria.</p>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    <section id="transporte" class="page">
+      <h2>Transporte</h2>
+      <p>Flota, asignación de vehículos, rutas y mantenimiento.</p>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    <section id="seguridad" class="page">
+      <h2>Ingeniero en Seguridad e Higiene</h2>
+      <p>Protocolos de seguridad, bitácoras de inspección, reportes de incidentes y acciones correctivas.</p>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    <section id="especialistas" class="page">
+      <h2>Ingenieros Especialistas (Eléctrico, Mecánico, Hidráulico)</h2>
+      <p>Gestión de estudios técnicos, asignaciones y reportes por disciplina.</p>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+    <section id="disenador" class="page">
+      <h2>Diseñador de Interiores / Paisajista</h2>
+      <p>Propuestas estéticas, renders, especificaciones y presupuestos asociados.</p>
+      <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
+    </section>
+
+  </main>
+
+
+
+  <script>
+    function openPage(id){
+      // hide all
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      const el=document.getElementById(id);
+      if(!el) return;
+      el.classList.add('active');
+      // push state so back/forward works
+      history.pushState({page:id}, '', '#'+id);
+      window.scrollTo(0,0);
+    }
+    function goHome(){
+      document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+      document.getElementById('home').classList.add('active');
+      history.pushState({page:'home'}, '', '#');
+      window.scrollTo(0,0);
+    }
+
+    window.addEventListener('popstate', function(e){
+      const state = e.state;
+      if(state && state.page){
+        document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+        const el = document.getElementById(state.page);
+        if(el) el.classList.add('active');
+        else document.getElementById('home').classList.add('active');
+      } else {
+        goHome();
+      }
+    });
+    
+    window.addEventListener('load', function(){
+      const hash = location.hash.replace('#','');
+      if(hash){
+        const el = document.getElementById(hash);
+        if(el) openPage(hash);
+      }
+    });
+  </script>
+</body>
+</html>
