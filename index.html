@@ -156,17 +156,18 @@
         <ol>
             <li>Registrar facturas </li>
             <li>Actualizar los gastos en la base de datos</li>
-            <li>Eliminar registros obsoletos en la base de datos</li>
+            
          </ol>
       <div class="subapartado">
         <h3>Campos</h3>
-        <p>ID_Registro</p>
-        <p>Responsable</p>
-        <p>Correo </p>
-        <p>Telefono</p>
-        <p>Presupuesto_asignado</p>
-        <p>Gastos</p>
-        <p>Facturas</p>
+        <p>ID_Transaccion: Identificador único de la transacción.</p>
+        <p>Fecha: Fecha en que se realizó la transacción.</p>
+        <p>Tipo: Ingreso o Egreso </p>
+        <p>Monto: Cantidad de dinero de la transacción.</p>
+        <p>Descripción: Detalle de la transacción (ej. pago de renta, venta de producto).</p>
+        <p>MetodoPago: Efectivo o transferencia</p>
+        <p>ID_Proveedor: Relación con la tabla Proveedores (si es un egreso).</p>
+        <p>ID_Cliente: Relación con la tabla Clientes (si es un ingreso).</p>
       </div>
       <div class="subapartado">
         <h3>Diseño de la base de datos del subsistema</h3>
