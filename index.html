@@ -64,10 +64,10 @@
         <div class="card" onclick="openPage('trabajadores')"><strong>Trabajadores</strong><div class="subtitle">Registro, roles y disponibilidad</div></div>
         <div class="card" onclick="openPage('planos')"><strong>Planos</strong><div class="subtitle">Versiones, acceso y aprobación</div></div>
         <div class="card" onclick="openPage('proveedores')"><strong>Proveedores</strong><div class="subtitle">Contactos, contratos y evaluaciones</div></div>
-        <div class="card" onclick="openPage('finanzas')"><strong>Área de Finanzas</strong><div class="subtitle">Presupuestos, pagos y seguimiento</div></div>
+        <div class="card" onclick="openPage('finanzas')"><strong>Área de Finanzas</strong><div class="subtitle">Pagos</div></div>
         <div class="card" onclick="openPage('legal')"><strong>Área Legal</strong><div class="subtitle">Contratos y asuntos legales</div></div>
         <div class="card" onclick="openPage('permisos')"><strong>Permisos y Licencias</strong><div class="subtitle">Trámites y vencimientos</div></div>
-        <div class="card" onclick="openPage('seguros')"><strong>Seguros</strong><div class="subtitle">Pólizas y reclamaciones</div></div>
+        <div class="card" onclick="openPage('seguros')"><strong>Seguros</strong><div class="subtitle">Pólizas y seguros</div></div>
         <div class="card" onclick="openPage('almacen')"><strong>Almacén (Materiales y Maquinaria)</strong><div class="subtitle">Inventario y movimientos</div></div>
         <div class="card" onclick="openPage('transporte')"><strong>Transporte</strong><div class="subtitle">Flota, rutas y asignaciones</div></div>
         <div class="card" onclick="openPage('seguridad')"><strong>Ingeniero en Seguridad e Higiene</strong><div class="subtitle">Reportes e inspecciones</div></div>
@@ -131,7 +131,7 @@
     </section>
     <section id="finanzas" class="page">
 
-    // Apartado de Área de Finanzas
+
 
          <h2>Área de Finanzas</h2>
       <p>Mantener un control detallado y confiable de los ingresos y egresos de la empresa, garantizando la estabilidad y salud financiera de la constructora.</p>
@@ -170,8 +170,8 @@
         <p>ID_Cliente: Relación con la tabla Clientes (si es un ingreso).</p>
       </div>
       <div class="subapartado">
-        <h3>Diseño de la base de datos del subsistema</h3>
-        <p>Tablas: Transacciones, Presupuestos, Pagos, Ingresos.</p>
+      <h3>Diseño de la base de datos del subsistema</h3>
+      <a href="#" onclick="openPage('finanzas_db');return false;">Ver diseño de base de datos</a>
       </div>
       <div class="subapartado">
         <h3>Responsable del subsistema</h3>
@@ -180,7 +180,7 @@
       <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
     </section>
 
-    // Apartado Área legal
+
     <section id="legal" class="page">
       <h2>Área Legal</h2>
       <p>Gestión de contratos, legítimos y cumplimiento normativo.</p>
@@ -222,6 +222,8 @@
       </div>
       <div class="subapartado">
         <h3>Diseño de la base de datos del subsistema</h3>
+        <a href="#" onclick="openPage('finanzas_db');return false;">Ver diseño de base de datos</a>
+        
       </div>
       <div class="subapartado">
         <h3>Responsable del subsistema</h3>
@@ -230,7 +232,7 @@
       <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
     </section>
 
-    //Apartado permisos
+
     <section id="permisos" class="page">
        <h2>Permisos y Licencias</h2>
       <p>Garantizar que todos los proyectos cuenten con permisos vigentes.</p>
@@ -271,6 +273,7 @@
       </div>
       <div class="subapartado">
         <h3>Diseño de la base de datos del subsistema</h3>
+        <a href="#" onclick="openPage('finanzas_db');return false;">Ver diseño de base de datos</a>
       </div>
       <div class="subapartado">
         <h3>Responsable del subsistema</h3>
@@ -279,7 +282,7 @@
       <a class="back" href="#" onclick="goHome();return false;">← Regresar a la principal</a>
     </section>
 
-    //Apartado Área de seguros
+
     <section id="seguros" class="page">
       <h2>Seguros</h2>
       <p>Proteger a la empresa, personal y maquinaria de riesgos.</p>
@@ -320,7 +323,7 @@
       </div>
       <div class="subapartado">
         <h3>Diseño de la base de datos del subsistema</h3>
-        <p>Tablas: Pólizas, Aseguradoras, Siniestros.</p>
+        <a href="#" onclick="openPage('finanzas_db');return false;">Ver diseño de base de datos</a>
       </div>
       <div class="subapartado">
         <h3>Responsable del subsistema</h3>
@@ -371,7 +374,7 @@
       const el=document.getElementById(id);
       if(!el) return;
       el.classList.add('active');
-      // push state so back/forward works
+ 
       history.pushState({page:id}, '', '#'+id);
       window.scrollTo(0,0);
     }
